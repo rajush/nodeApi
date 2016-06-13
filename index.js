@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
+// Connecting to mongodb using mongoose
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/cats');
 
