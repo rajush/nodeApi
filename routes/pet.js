@@ -63,4 +63,8 @@ module.exports = function(app){
         */
     });
 
+    app.get('/ping', function(req, res){
+        res.json({pong: Date.now()});
+    })
+
 }
