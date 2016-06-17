@@ -13,6 +13,6 @@ app.use(bodyParser.urlencoded({
 // requiring a path for pets
 var petRoutes = require('./routes/pet.js')(app);
 
-var server = app.listen(3000, function(){
+var server = app.listen(3002, function(){
     console.log('Server running at http://127.0.0.1:3002/');
 });
