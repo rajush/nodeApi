@@ -43,6 +43,7 @@ module.exports = function(app){
         },
         // when all done
         function(error, results){
+            /* do not put blocking conditions here */
             // sending down the pipe response.json
             res.json({
                 error: error,
