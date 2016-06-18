@@ -21,15 +21,15 @@ module.exports = function(app){
             if (err) {
                 res.json({info: 'error during find dogs', error: err});
             }
-            res.json({info: 'dogs found successfully', data: dogs});
-            // setTimeout(function(){
-            //     res.json({info: 'dogs found successfully', data: dogs});
-            // }, 10000);
+            //res.json({info: 'dogs found successfully', data: dogs});
+            setTimeout(function(){
+                res.json({info: 'dogs found successfully', data: dogs});
+            }, 10000);
         });
     });
 
     app.get('/dog/:id', function(req, res){
-        Dog.find(function(err, dog){
+        Dog.findById(req.parma.id, function(err, dog){
             if (err) {
                 res.json({info: 'error during find dog', error: err});
             }
